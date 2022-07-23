@@ -24,21 +24,22 @@ namespace Class_List
                 if (ekle == "E")
                 {
                     Kisiler kisi1 = Kisiler.YeniKisi();
+                    kisi1.OgrenciNo = OgrenciNo;
                     sinif.Add(OgrenciNo, kisi1);
                     count++;
                 }
 
                 else if (ekle == "H")
                 {
-                    Console.WriteLine("Kisi ekleme tamamlandı. Program kapatılıyor");
+                    Console.WriteLine("Kişi ekleme tamamlandı. Program kapatılıyor");
                     KisiEkle = false;
                 }
 
                 else
                 {
-                    Console.WriteLine("Yanlış giriş yaptınız."); 
+                    Console.WriteLine("Yanlış giriş yaptınız.");
                 }
-                
+
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("Sınıfta Mevcut Öğrenciler:");
@@ -51,7 +52,8 @@ namespace Class_List
                 }
             }
 
-            
+            //Kisiler kisi0 = sinif["MSDS-0622-0"];     Yukarıdaki kod'da dictionary kaydı dışında hiçbir class instance'ı saklanmıyor.
+            //Console.WriteLine(ogrenci0);              Bu yüzden instance'ları kullanabilmek için istediğimiz instance'ı tek tek çıkarmak gerekiyor.
         }
     }
 }

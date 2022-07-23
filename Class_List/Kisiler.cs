@@ -31,6 +31,8 @@ namespace Class_List
             { return _Soyisim; }
         }
 
+        public string OgrenciNo { get; set; }
+
         public Kisiler(int tc, string isim, string soyisim)
         {
             _TC = tc;
