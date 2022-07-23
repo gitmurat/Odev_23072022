@@ -52,8 +52,8 @@ namespace Class_List
                 }
             }
 
-            //Kisiler kisi0 = sinif["MSDS-0622-0"];     Yukarıdaki kod'da dictionary kaydı dışında hiçbir class instance'ı saklanmıyor.
-            //Console.WriteLine(ogrenci0);              Bu yüzden instance'ları kullanabilmek için istediğimiz instance'ı tek tek çıkarmak gerekiyor.
+            //Kisiler ogrenci0 = sinif["MSDS-0622-0"];      Yukarıdaki kod'da dictionary kaydı dışında hiçbir class instance'ı saklanmıyor.
+            //Console.WriteLine(ogrenci0);                  Bu yüzden instance'ları kullanabilmek için istediğimiz instance'ı tek tek çıkarmak gerekiyor.
         }
     }
 }
