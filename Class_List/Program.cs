@@ -12,20 +12,20 @@ namespace Class_List
         static void Main(string[] args)
         {
             bool KisiEkle = true;
-            Dictionary<int, Kisiler> sinif = new Dictionary<int, Kisiler>();
+            Dictionary<string, Kisiler> sinif = new Dictionary<string, Kisiler>();
             int count = 0;
+            string OgrenciNo = "";
 
             while (KisiEkle)
             {
                 Console.WriteLine("Sınıfa yeni bir kişi eklemek istiyor musunuz? Evet için 'E', Hayır için 'H' yazınız.");
                 string ekle = Console.ReadLine();
-
+                OgrenciNo = "MSDS-0622-" + count.ToString();
                 if (ekle == "E")
                 {
                     Kisiler kisi1 = Kisiler.YeniKisi();
-                    sinif.Add(count, kisi1);
+                    sinif.Add(OgrenciNo, kisi1);
                     count++;
-                    
                 }
 
                 else if (ekle == "H")
@@ -36,13 +36,22 @@ namespace Class_List
 
                 else
                 {
-                    Console.WriteLine("Yanlış giriş yaptınız.");
-                    
+                    Console.WriteLine("Yanlış giriş yaptınız."); 
                 }
                 
-                foreach (var key in sinif.Keys)
-                Console.WriteLine(key + " - "+ sinif[key]);
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Sınıfta Mevcut Öğrenciler:");
+                Console.WriteLine("--------------------------");
+
+                foreach (string key in sinif.Keys)
+                {
+                    Console.WriteLine(key + " - " + sinif[key]);
+                    Console.WriteLine();
+                }
             }
+
+            
         }
     }
 }
